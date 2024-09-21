@@ -1,0 +1,38 @@
+---
+const K = 3; // Number of recent posts to display
+
+const { posts } = Astro.props;
+
+const recentPosts = posts
+    .sort((a, b) => {
+        return (
+            new Date(a.frontmatter.step).getTime() -
+            new Date(b.frontmatter.step).getTime()
+        );
+    })
+    .slice(0, K);
+---
+
+<div class="flex flex-col lg:flex-row justify-evenly">
+    <div>
+        {
+            recentPosts.map((post, index) => (
+                <div class="mb-8">
+                    <h4 class="mb-2">
+                        <a href={post.url}>{post.frontmatter.title}</a>
+                    </h4>
+                    <p>{post.frontmatter.description}</p>
+                    <p class="text-white-600 dark:text-white-400">
+                        {post.frontmatter.step}
+                    </p>
+                    <a
+                        class="text-secondary dark:text-dk-secondary hover:text-accent dark:hover:text-dk-accent"
+                        href={post.url}
+                    >
+                        Прочитајте &rarr;
+                    </a>
+                </div>
+            ))
+        }
+    </div>
+</div>
