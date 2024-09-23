@@ -4,7 +4,7 @@ import TopButton from "../components/TopButton";
 import Pointer from "../components/Pointer";
 
 const { title } = Astro.props;
-const posts = await Astro.glob("../pages/posts/*mdx");
+const posts = await Astro.glob("../pages/posts/*.mdx");
 
 import "../styles/global.css";
 ---
