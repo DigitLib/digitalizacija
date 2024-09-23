@@ -12,7 +12,7 @@ const { frontmatter } = Astro.props;
 
 const { title, step, img_path, img_alt } = frontmatter;
 
-const allPosts = await Astro.glob("../pages/posts/*.md");
+const allPosts = await Astro.glob("../pages/posts/*mdx");
 // TODO: add tags here
 ---
 

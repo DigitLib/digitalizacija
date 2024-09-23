@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Post from "../components/post_section/Post.astro";
 import Footer from "../components/footer.astro";
 
-const allPosts = await Astro.glob("../pages/posts/*.md");
+const allPosts = await Astro.glob("../pages/posts/*mdxx");
 
 // Reorder allPosts by date
 allPosts.sort((a, b) => {
