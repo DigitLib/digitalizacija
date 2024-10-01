@@ -22,6 +22,12 @@ export default function Contact({ contact, size }: ContactProps) {
       link_alt: "Discord",
     },
     {
+      name: "handbook",
+      icon: "fa-solid fa-book",
+      link: contact.handbook,
+      link_alt: "Europeana Handbook",
+    },
+    {
       name: "rss",
       icon: "fas fa-rss",
       link: "/digitalizacija/rss.xml",
