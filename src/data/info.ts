@@ -94,5 +94,6 @@ export const info = {
     discord: "https://discord.gg/EFnfZaCgWZ",
     github: "https://github.com/DigitLib/digitalizacija",
     handbook: "https://europeana.github.io/fste-digitization-handbook/sr/",
+    files: "https://drive.google.com/drive/folders/14PVFKxsHj-XBiKo9-_ooJZEnV81F3nf2?usp=sharing",
   },
 };
